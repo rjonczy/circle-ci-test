@@ -30,4 +30,7 @@ jobs:
 workflows:
   say-hello-workflow:
     jobs:
-      - say-hello
+      - say-hello:
+          filters:
+            tags:
+              only: /^v?\d+\.\d+\.\d+(?:-.*)?$/
